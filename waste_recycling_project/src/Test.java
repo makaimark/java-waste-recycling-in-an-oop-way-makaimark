@@ -7,10 +7,13 @@ public class Test {
         Dustbin bin = new Dustbin("red");
         paperGarbage paper = new paperGarbage("newspaper", false);
         System.out.println("Paper is squeezed: " + paper.isSqueezed);
-        //paper.squeeze();
-        System.out.println("Paper is squeezed: " + paper.isSqueezed);
-        bin.throwOutGarbage(paper);
-
+        try {
+            bin.throwOutGarbage(paper);
+        }
+        catch (DustbinContentException e) {
+            paper.squeeze();
+            bin.throwOutGarbage(paper);
+        }
         System.out.println("Bin paper content: " + bin.paperContent);
         bin.emptyContent();
         System.out.println("Bin paper content: " + bin.paperContent);
