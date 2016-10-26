@@ -2,8 +2,7 @@
  * Created by makaimark on 2016.10.25..
  */
 
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Dustbin {
 
@@ -14,6 +13,9 @@ public class Dustbin {
 
     Dustbin(String color){
         this.color = color;
+        this.paperContent = new ArrayList<>();
+        this.plasticContent = new ArrayList<>();
+        this.houseWasteContent = new ArrayList<>();
     }
 
     public void emptyContent(){

@@ -6,13 +6,13 @@ public class Test {
     public static void main(String[] args) throws DustbinContentException {
         Dustbin bin = new Dustbin("red");
         paperGarbage paper = new paperGarbage("newspaper", false);
-        //System.out.println(paper.isSqueezed);
-        paper.squeeze();
-        //System.out.println(paper.isSqueezed);
+        System.out.println("Paper is squeezed: " + paper.isSqueezed);
+        //paper.squeeze();
+        System.out.println("Paper is squeezed: " + paper.isSqueezed);
         bin.throwOutGarbage(paper);
 
-//        System.out.println(bin.paperContent);
-//        bin.emptyContent();
-//        System.out.println(bin.paperContent);
+        System.out.println("Bin paper content: " + bin.paperContent);
+        bin.emptyContent();
+        System.out.println("Bin paper content: " + bin.paperContent);
     }
 }
